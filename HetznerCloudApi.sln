@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HetznerCloudApi", "HetznerCloudApi\HetznerCloudApi.csproj", "{D762351B-635F-4372-8FF0-9210A4F657AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C4B88AB3-2C02-41BC-B314-9129C65ECE57}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D762351B-635F-4372-8FF0-9210A4F657AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D762351B-635F-4372-8FF0-9210A4F657AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D762351B-635F-4372-8FF0-9210A4F657AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D762351B-635F-4372-8FF0-9210A4F657AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B88AB3-2C02-41BC-B314-9129C65ECE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B88AB3-2C02-41BC-B314-9129C65ECE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B88AB3-2C02-41BC-B314-9129C65ECE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B88AB3-2C02-41BC-B314-9129C65ECE57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A7067DA4-665F-4936-A300-BE3438ED40EE}
+	EndGlobalSection
+EndGlobal
