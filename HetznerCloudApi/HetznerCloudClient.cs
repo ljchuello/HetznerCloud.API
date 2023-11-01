@@ -11,8 +11,10 @@ namespace HetznerCloudApi
             Token = token;
 
             Image = new ImageClient(token);
+            ServerType = new ServerTypeClient(token);
         }
 
         public ImageClient Image { get; private set; }
+        public ServerTypeClient ServerType { get; private set; }
     }
 }

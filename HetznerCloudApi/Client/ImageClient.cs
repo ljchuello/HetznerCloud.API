@@ -30,7 +30,7 @@ namespace HetznerCloudApi.Client
                 page++;
 
                 // Get list
-                Response response = JsonConvert.DeserializeObject<Response>(await Core.SendGetRequest(_token, $"/images?page={page}&per_page=25")) ?? new Response();
+                Response response = JsonConvert.DeserializeObject<Response>(await Core.SendGetRequest(_token, $"/images?page={page}&per_page={Core.PerPage}")) ?? new Response();
 
                 // Run
                 foreach (Image row in response.Images)

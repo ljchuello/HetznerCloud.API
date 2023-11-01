@@ -2,12 +2,12 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace HetznerCloudApi.Object.Image.Response
+namespace HetznerCloudApi.Object.ServerType
 {
     public class Response
     {
-        [JsonProperty("images")]
-        public List<Image> Images { get; set; } = new List<Image>();
+        [JsonProperty("server_types")]
+        public List<ServerType> ServerTypes { get; set; } = new List<ServerType>();
 
         [JsonProperty("meta")]
         public Meta Meta { get; set; } = new Meta();
