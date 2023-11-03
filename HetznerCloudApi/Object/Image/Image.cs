@@ -48,7 +48,7 @@ namespace HetznerCloudApi.Object.Image
         /// Point in time when the Resource was created
         /// </summary>
         [JsonProperty("created", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime Created { get; set; } = new DateTime();
+        public DateTime Created { get; set; } = new DateTime(1900, 01, 01);
 
         //[JsonProperty("created_from")]
         //public object CreatedFrom { get; set; }

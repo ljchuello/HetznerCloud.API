@@ -6,34 +6,37 @@ namespace HetznerCloudApi.Object.Universal
 {
     public class Action
     {
-        [JsonProperty("command", NullValueHandling = NullValueHandling.Ignore)]
-        public string Command { get; set; }
-
-        [JsonProperty("finished", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime Finished { get; set; }
-
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public long Id { get; set; } = 0;
 
-        [JsonProperty("progress", NullValueHandling = NullValueHandling.Ignore)]
-        public int Progress { get; set; }
-
-        [JsonProperty("resources", NullValueHandling = NullValueHandling.Ignore)]
-        public List<Resource> Resources { get; set; }
-
-        [JsonProperty("started", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime Started { get; set; }
+        [JsonProperty("command", NullValueHandling = NullValueHandling.Ignore)]
+        public string Command { get; set; } = string.Empty;
 
         [JsonProperty("status", NullValueHandling = NullValueHandling.Ignore)]
-        public string Status { get; set; }
+        public string Status { get; set; } = string.Empty;
+
+        [JsonProperty("progress", NullValueHandling = NullValueHandling.Ignore)]
+        public long Progress { get; set; } = 0;
+
+        [JsonProperty("started", NullValueHandling = NullValueHandling.Ignore)]
+        public DateTime Started { get; set; } = new DateTime(1900, 01, 01);
+
+        [JsonProperty("finished", NullValueHandling = NullValueHandling.Ignore)]
+        public DateTime Finished { get; set; } = new DateTime(1900, 01, 01);
+
+        [JsonProperty("resources", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Resource> Resources { get; set; } = new List<Resource>();
+
+        //[JsonProperty("error", NullValueHandling = NullValueHandling.Ignore)]
+        //public Error Error { get; set; } = new Error();
     }
 
     public class Resource
     {
         [JsonProperty("id", NullValueHandling = NullValueHandling.Ignore)]
-        public int Id { get; set; }
+        public long Id { get; set; } = 0;
 
         [JsonProperty("type", NullValueHandling = NullValueHandling.Ignore)]
-        public string Type { get; set; }
+        public string Type { get; set; } = string.Empty;
     }
 }

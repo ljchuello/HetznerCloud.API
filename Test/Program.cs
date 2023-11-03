@@ -18,11 +18,12 @@ namespace Test
                 
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                Volume volume = await hetznerCloudClient.Volume.Get(100051904);
-
-                await hetznerCloudClient.Volume.Delete(volume);
-
-                await hetznerCloudClient.Volume.Delete(100051904);
+                for (int i = 1; i <= 100; i++)
+                {
+                    Console.WriteLine(i);
+                    Volume volume = await hetznerCloudClient.Volume.Create($"{Guid.NewGuid()}", 10, VolumeFormat.xfs, 3);
+                    await hetznerCloudClient.Volume.Delete(volume);
+                }
             }
             catch (Exception ex)
             {

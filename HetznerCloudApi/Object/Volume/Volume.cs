@@ -10,7 +10,7 @@ namespace HetznerCloudApi.Object.Volume
         /// Point in time when the Resource was created
         /// </summary>
         [JsonProperty("created", NullValueHandling = NullValueHandling.Ignore)]
-        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; } = new DateTime(1900, 01, 01);
 
         /// <summary>
         /// Filesystem of the Volume if formatted on creation, null if not formatted on creation
