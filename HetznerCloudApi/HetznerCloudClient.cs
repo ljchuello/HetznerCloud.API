@@ -15,6 +15,7 @@ namespace HetznerCloudApi
             Location = new LocationClient(token);
             ServerType = new ServerTypeClient(token);
             Volume = new VolumeClient(token);
+            VolumeAction = new VolumeActionClient(token);
         }
 
         public DatacenterClient Datacenter { get; private set; }
@@ -22,5 +23,6 @@ namespace HetznerCloudApi
         public LocationClient Location { get; private set; }
         public ServerTypeClient ServerType { get; private set; }
         public VolumeClient Volume { get; private set; }
+        public VolumeActionClient VolumeAction { get; private set; }
     }
 }

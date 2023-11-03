@@ -1,5 +1,5 @@
 ﻿using HetznerCloudApi;
-using HetznerCloudApi.Object.Volume;
+using Action = HetznerCloudApi.Object.Action.Action;
 
 namespace Test
 {
@@ -15,15 +15,14 @@ namespace Test
             try
             {
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
-                
+
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                for (int i = 1; i <= 100; i++)
-                {
-                    Console.WriteLine(i);
-                    Volume volume = await hetznerCloudClient.Volume.Create($"{Guid.NewGuid()}", 10, VolumeFormat.xfs, 3);
-                    await hetznerCloudClient.Volume.Delete(volume);
-                }
+                List<Action> list = await hetznerCloudClient.VolumeAction.GetAllActions();
+
+                long actionId = 1236866267;
+
+                Action action = await hetznerCloudClient.VolumeAction.GetAction(actionId);
             }
             catch (Exception ex)
             {

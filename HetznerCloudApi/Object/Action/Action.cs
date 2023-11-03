@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace HetznerCloudApi.Object.Universal
+namespace HetznerCloudApi.Object.Action
 {
     public class Action
     {
