@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using HetznerCloudApi.Object.ServerType;
-using HetznerCloudApi.Object.ServerType.Response;
+using HetznerCloudApi.Object.ServerType.Get;
 
 namespace HetznerCloudApi.Client
 {

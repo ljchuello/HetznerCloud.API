@@ -1,8 +1,8 @@
-﻿using HetznerCloudApi.Object.Universal;
+﻿using System.Collections.Generic;
+using HetznerCloudApi.Object.Universal;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 
-namespace HetznerCloudApi.Object.Image.Response
+namespace HetznerCloudApi.Object.Image.Get
 {
     public class Response
     {

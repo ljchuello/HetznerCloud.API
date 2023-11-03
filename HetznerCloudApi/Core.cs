@@ -2,12 +2,10 @@
 using System.Net;
 using System.Threading.Tasks;
 using System;
-using System.Collections.Generic;
 using HetznerCloudApi.Object.Universal;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
-using System.Linq;
 
 namespace HetznerCloudApi
 {
@@ -32,24 +30,28 @@ namespace HetznerCloudApi
             // Response
             string json = await httpResponseMessage.Content.ReadAsStringAsync();
 
-            // No OK
-            if (httpResponseMessage.StatusCode != HttpStatusCode.OK)
+            switch (httpResponseMessage.StatusCode)
             {
-                // Get Error
-                JObject result = JObject.Parse(json);
-                Error error = JsonConvert.DeserializeObject<Error>($"{result["error"]}") ?? new Error();
+                case HttpStatusCode.OK:
+                    break;
 
-                //Check error
-                if (error.Message.Contains("with ID") && error.Message.Contains("not found"))
-                {
-                    // The error is due to the resource not being found. Let's make it return empty instead of an error.
-                    json = "{}";
-                }
-                else
-                {
-                    // If it's a genuine error
-                    throw new Exception($"{error.Code} - {error.Message}");
-                }
+                default:
+                    // Get Error
+                    JObject result = JObject.Parse(json);
+                    Error error = JsonConvert.DeserializeObject<Error>($"{result["error"]}") ?? new Error();
+
+                    //Check error
+                    if (error.Message.Contains("with ID") && error.Message.Contains("not found"))
+                    {
+                        // The error is due to the resource not being found. Let's make it return empty instead of an error.
+                        json = "{}";
+                    }
+                    else
+                    {
+                        // If it's a genuine error
+                        throw new Exception($"{error.Code} - {error.Message}");
+                    }
+                    break;
             }
 
             return json;
@@ -99,29 +101,75 @@ namespace HetznerCloudApi
             return json;
         }
 
-        //static string RemoveNullProperties(string json)
-        //{
-        //    // Check
-        //    if (string.IsNullOrWhiteSpace(json) || json == "{}")
-        //    {
-        //        return json;
-        //    }
+        public static async Task<string> SendPutRequest(string token, string url, string content)
+        {
+            HttpResponseMessage httpResponseMessage;
+            using (HttpClient httpClient = new HttpClient())
+            {
+                using (HttpRequestMessage httpRequestMessage = new HttpRequestMessage(new HttpMethod("PUT"), $"{ApiServer}{url}"))
+                {
+                    httpRequestMessage.Headers.TryAddWithoutValidation("Authorization", $"Bearer {token}");
+                    httpRequestMessage.Content = new StringContent(content);
+                    httpRequestMessage.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+                    httpResponseMessage = await httpClient.SendAsync(httpRequestMessage);
+                }
+            }
 
-        //    // Set
-        //    JObject jObject = JObject.Parse(json);
+            // Response
+            string json = await httpResponseMessage.Content.ReadAsStringAsync();
 
-        //    // List
-        //    List<JToken> propertiesToRemove = jObject.Descendants().Where(j => j.Type == JTokenType.Property && j.First == null).ToList();
+            switch (httpResponseMessage.StatusCode)
+            {
+                case HttpStatusCode.OK:
+                    break;
 
-        //    // foreach
-        //    foreach (JToken row in propertiesToRemove)
-        //    {
-        //        row.Remove();
-        //    }
+                default:
+                    // Get Error
+                    JObject result = JObject.Parse(json);
+                    Error error = JsonConvert.DeserializeObject<Error>($"{result["error"]}") ?? new Error();
 
-        //    // Retur
-        //    json = jObject.ToString();
-        //    return json;
-        //}
+                    //Check error
+                    if (error.Message.Contains("with ID") && error.Message.Contains("not found"))
+                    {
+                        // The error is due to the resource not being found. Let's make it return empty instead of an error.
+                        json = "{}";
+                    }
+                    else
+                    {
+                        // If it's a genuine error
+                        throw new Exception($"{error.Code} - {error.Message}");
+                    }
+                    break;
+            }
+
+            return json;
+        }
+
+        public static async Task SendDeleteRequest(string token, string url)
+        {
+            HttpResponseMessage httpResponseMessage;
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), $"{ApiServer}{url}"))
+                {
+                    request.Headers.TryAddWithoutValidation("Authorization", $"Bearer {token}");
+                    httpResponseMessage = await httpClient.SendAsync(request);
+                }
+            }
+
+            // Response
+            string json = await httpResponseMessage.Content.ReadAsStringAsync();
+
+            switch (httpResponseMessage.StatusCode)
+            {
+                case HttpStatusCode.NoContent:
+                    break;
+
+                default:
+                    JObject result = JObject.Parse(json);
+                    Error error = JsonConvert.DeserializeObject<Error>($"{result["error"]}") ?? new Error();
+                    throw new Exception($"{error.Code} - {error.Message}");
+            }
+        }
     }
 }

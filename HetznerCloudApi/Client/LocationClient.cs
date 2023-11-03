@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using HetznerCloudApi.Object.Location;
+using HetznerCloudApi.Object.Location.Get;
 using Newtonsoft.Json.Linq;
-using HetznerCloudApi.Object.Location.Response;
 
 namespace HetznerCloudApi.Client
 {

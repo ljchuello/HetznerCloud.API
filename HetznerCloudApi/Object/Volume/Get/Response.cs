@@ -2,12 +2,12 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace HetznerCloudApi.Object.ServerType.Response
+namespace HetznerCloudApi.Object.Volume.Get
 {
     public class Response
     {
-        [JsonProperty("server_types", NullValueHandling = NullValueHandling.Ignore)]
-        public List<ServerType> ServerTypes { get; set; } = new List<ServerType>();
+        [JsonProperty("volumes", NullValueHandling = NullValueHandling.Ignore)]
+        public List<Volume> Volumes { get; set; } = new List<Volume>();
 
         [JsonProperty("meta", NullValueHandling = NullValueHandling.Ignore)]
         public Meta Meta { get; set; } = new Meta();

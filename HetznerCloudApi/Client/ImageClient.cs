@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using HetznerCloudApi.Object.Image;
-using HetznerCloudApi.Object.Image.Response;
+using HetznerCloudApi.Object.Image.Get;
 using Newtonsoft.Json.Linq;
 
 namespace HetznerCloudApi.Client
