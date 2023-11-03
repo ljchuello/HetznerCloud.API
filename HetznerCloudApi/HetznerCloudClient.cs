@@ -14,11 +14,13 @@ namespace HetznerCloudApi
             Image = new ImageClient(token);
             Location = new LocationClient(token);
             ServerType = new ServerTypeClient(token);
+            Volume = new VolumeClient(token);
         }
 
         public DatacenterClient Datacenter { get; private set; }
         public ImageClient Image { get; private set; }
         public LocationClient Location { get; private set; }
         public ServerTypeClient ServerType { get; private set; }
+        public VolumeClient Volume { get; private set; }
     }
 }

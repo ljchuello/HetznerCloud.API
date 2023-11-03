@@ -6,10 +6,10 @@ namespace HetznerCloudApi.Object.Location.Response
 {
     public class Response
     {
-        [JsonProperty("locations")]
+        [JsonProperty("locations", NullValueHandling = NullValueHandling.Ignore)]
         public List<Location> Locations { get; set; } = new List<Location>();
         
-        [JsonProperty("meta")]
+        [JsonProperty("meta", NullValueHandling = NullValueHandling.Ignore)]
         public Meta Meta { get; set; } = new Meta();
     }
 }

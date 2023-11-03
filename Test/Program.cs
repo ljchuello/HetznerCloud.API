@@ -1,6 +1,8 @@
 ﻿using HetznerCloudApi;
+using HetznerCloudApi.Client;
 using HetznerCloudApi.Object.Datacenter;
 using HetznerCloudApi.Object.Location;
+using HetznerCloudApi.Object.Volume;
 
 namespace Test
 {
@@ -17,11 +19,7 @@ namespace Test
             {
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                List<Datacenter> listLocation = await hetznerCloudClient.Datacenter.Get();
-
-                long LocationId = 3;
-
-                Datacenter location = await hetznerCloudClient.Datacenter.Get(LocationId);
+                var a = await hetznerCloudClient.Volume.Create("abc123", 10, VolumeFormat.xfs, 5);
             }
             catch (Exception ex)
             {

@@ -6,10 +6,10 @@ namespace HetznerCloudApi.Object.Image.Response
 {
     public class Response
     {
-        [JsonProperty("images")]
+        [JsonProperty("images", NullValueHandling = NullValueHandling.Ignore)]
         public List<Image> Images { get; set; } = new List<Image>();
 
-        [JsonProperty("meta")]
+        [JsonProperty("meta", NullValueHandling = NullValueHandling.Ignore)]
         public Meta Meta { get; set; } = new Meta();
     }
 }

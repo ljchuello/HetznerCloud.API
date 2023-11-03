@@ -39,7 +39,7 @@ namespace HetznerCloudApi.Client
                 }
 
                 // Finish?
-                if (response.Meta.Pagination.NextPage == null)
+                if (response.Meta.Pagination.NextPage == 0)
                 {
                     // Yes, finish
                     return listImage;

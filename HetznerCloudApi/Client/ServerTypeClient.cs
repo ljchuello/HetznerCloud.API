@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using HetznerCloudApi.Object.ServerType;
+using HetznerCloudApi.Object.ServerType.Response;
 
 namespace HetznerCloudApi.Client
 {
@@ -34,7 +35,7 @@ namespace HetznerCloudApi.Client
                 }
 
                 // Finish?
-                if (response.Meta.Pagination.NextPage == null)
+                if (response.Meta.Pagination.NextPage == 0)
                 {
                     // Yes, finish
                     return listServerType;

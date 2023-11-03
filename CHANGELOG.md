@@ -1,6 +1,9 @@
 # Changelog
 
 ## Version 0.0.4 (2023-11-02)
+- Global; The object properties have been changed to avoid conflicts with null values. This is done for compatibility with .NET Framework (This change is transparent to the user)
+
+## Version 0.0.4 (2023-11-02)
 - Datacenters; Complete
 - Locations; Corrected the name of the internal variable in Locations
 
