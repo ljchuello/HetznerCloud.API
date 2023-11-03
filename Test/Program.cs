@@ -1,6 +1,5 @@
 ﻿using HetznerCloudApi;
-using HetznerCloudApi.Object.Image;
-using HetznerCloudApi.Object.ServerType;
+using HetznerCloudApi.Object.Location;
 
 namespace Test
 {
@@ -17,9 +16,11 @@ namespace Test
             {
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                //List<ServerType> a = await hetznerCloudClient.ServerType.Get();
-                //ServerType b = await hetznerCloudClient.ServerType.Get(a[0].Id);
-                //ServerType c = await hetznerCloudClient.ServerType.Get(5555);
+                List<Location> listLocation = await hetznerCloudClient.Location.Get();
+
+                long LocationId = 2;
+
+                Location location = await hetznerCloudClient.Location.Get(LocationId);
             }
             catch (Exception ex)
             {

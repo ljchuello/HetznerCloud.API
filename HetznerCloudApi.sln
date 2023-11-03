@@ -10,7 +10,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{0D3D759E-7536-47D4-9DDA-C63A692B39AA}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\Users\LJChuello\Pictures\icon_128.png = ..\..\Users\LJChuello\Pictures\icon_128.png
-		1CHANGELOG.md = 1CHANGELOG.md
+		changelog.md = changelog.md
 		README.md = README.md
 	EndProjectSection
 EndProject
