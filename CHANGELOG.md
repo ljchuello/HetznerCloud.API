@@ -1,5 +1,9 @@
 # Changelog
 
+## Version 0.0.4 (2023-11-02)
+- Datacenters; Complete
+- Locations; Corrected the name of the internal variable in Locations
+
 ## Version 0.0.3 (2023-11-02)
 - Locations; Complete
 
