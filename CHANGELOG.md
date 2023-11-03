@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 0.0.6 (2023-11-02)
+- Actions; Complete
+
 ## Version 0.0.5 (2023-11-02)
 - Global; The object properties have been changed to avoid conflicts with null values. This is done for compatibility with .NET Framework (This change is transparent to the user)
 - Volume; Complete

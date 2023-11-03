@@ -10,6 +10,7 @@ namespace HetznerCloudApi
         {
             Token = token;
 
+            Action = new ActionClient(token);
             Datacenter = new DatacenterClient(token);
             Image = new ImageClient(token);
             Location = new LocationClient(token);
@@ -18,6 +19,7 @@ namespace HetznerCloudApi
             VolumeAction = new VolumeActionClient(token);
         }
 
+        public ActionClient Action { get; private set; }
         public DatacenterClient Datacenter { get; private set; }
         public ImageClient Image { get; private set; }
         public LocationClient Location { get; private set; }
