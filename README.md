@@ -9,6 +9,7 @@
 |  | Get all | Get one | Create | Update | Delete | Actions |
 |--|:--:|:--:|:--:|:--:|:--:|:--:|
 | Images | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Locations | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
 | Server Types | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
 
 To have the complete list of the functionalities implemented in this library [consult the Wiki](https://github.com/ljchuello/HetznerCloud.Api/wiki)
