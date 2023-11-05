@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="SshKeyGenerator" Version="1.1.51" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HetznerCloudApi\HetznerCloudApi.csproj" />
   </ItemGroup>
 

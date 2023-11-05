@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 0.0.7 (2023-11-04)
+- SSH Keys; Complete
+
 ## Version 0.0.6 (2023-11-02)
 - Actions; Complete
 

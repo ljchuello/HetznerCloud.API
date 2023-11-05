@@ -15,6 +15,7 @@ namespace HetznerCloudApi
             Image = new ImageClient(token);
             Location = new LocationClient(token);
             ServerType = new ServerTypeClient(token);
+            SshKey = new SshKeyClient(token);
             Volume = new VolumeClient(token);
             VolumeAction = new VolumeActionClient(token);
         }
@@ -24,6 +25,7 @@ namespace HetznerCloudApi
         public ImageClient Image { get; private set; }
         public LocationClient Location { get; private set; }
         public ServerTypeClient ServerType { get; private set; }
+        public SshKeyClient SshKey { get; private set; }
         public VolumeClient Volume { get; private set; }
         public VolumeActionClient VolumeAction { get; private set; }
     }

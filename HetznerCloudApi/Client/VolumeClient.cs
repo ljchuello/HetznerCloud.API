@@ -125,32 +125,5 @@ namespace HetznerCloudApi.Client
             // Send post
             await Delete(volume.Id);
         }
-
-        //public class Action
-        //{
-        //    public async Task Attach(Volume volume, long serverId, bool autoMount = true)
-        //    {
-        //        // Raw
-        //        string rawJson = $"{{\"server\":{serverId},\"automount\":{(autoMount ? "true" : "false")}}}";
-
-        //        // Send post
-        //        await ApiCore.SendPostRequest($"/volumes/{volume.Id}/actions/attach", rawJson);
-        //    }
-
-        //    public async Task Detach(Volume volume)
-        //    {
-        //        // Send post
-        //        await ApiCore.SendPostRequest($"/volumes/{volume.Id}/actions/detach", "{}");
-        //    }
-
-        //    public async Task Resize(Volume volume, int size)
-        //    {
-        //        // Raw
-        //        string rawJson = $"{{\"size\":{size}}}";
-
-        //        // Send post
-        //        await ApiCore.SendPostRequest($"/volumes/{volume.Id}/actions/resize", rawJson);
-        //    }
-        //}
     }
 }
