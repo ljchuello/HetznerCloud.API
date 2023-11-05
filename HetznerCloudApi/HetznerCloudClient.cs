@@ -12,6 +12,7 @@ namespace HetznerCloudApi
 
             Action = new ActionClient(token);
             Datacenter = new DatacenterClient(token);
+            Firewall = new FirewallClient(token);
             Image = new ImageClient(token);
             Location = new LocationClient(token);
             ServerType = new ServerTypeClient(token);
@@ -22,6 +23,7 @@ namespace HetznerCloudApi
 
         public ActionClient Action { get; private set; }
         public DatacenterClient Datacenter { get; private set; }
+        public FirewallClient Firewall { get; private set; }
         public ImageClient Image { get; private set; }
         public LocationClient Location { get; private set; }
         public ServerTypeClient ServerType { get; private set; }

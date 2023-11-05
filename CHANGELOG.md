@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 0.0.8 (2023-11-05)
+- Firewalls; Complete
+
 ## Version 0.0.7 (2023-11-04)
 - SSH Keys; Complete
 
