@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 0.0.9 (2023-11-05)
+- Firewall Actions; Complete
+
 ## Version 0.0.8 (2023-11-05)
 - Firewalls; Complete
 

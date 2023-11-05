@@ -1,5 +1,6 @@
 ﻿using HetznerCloudApi;
 using HetznerCloudApi.Object.Firewall;
+using Action = HetznerCloudApi.Object.Action.Action;
 
 namespace Test
 {
@@ -17,15 +18,26 @@ namespace Test
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                // Get
+                // Get the object
                 Firewall firewall = await hetznerCloudClient.Firewall.Get(1012861);
 
-                // You can delete it by passing the Firewall as a parameter
-                await hetznerCloudClient.Firewall.Delete(firewall);
+                // Get pre-existing rules
+                List<Rule> listRules = firewall.Rules;
 
-                // You can also delete it by passing the Firewall ID as a parameter.
-                await hetznerCloudClient.Firewall.Delete(1012861);
+                //Add new rule
+                listRules.Add(new Rule()
+                {
+                    Direction = Direction.@out,
+                    Protocol = Protocol.tcp,
+                    Port = "any",
+                    Description = "All port out open",
+                    DestinationIps = new List<string> { "0.0.0.0/0", "::/0" }
+                });
 
+                // Set rules
+                List<Action> listAction = await hetznerCloudClient.FirewallAction.SetRules(firewall, listRules);
+
+                Console.WriteLine();
                 Console.WriteLine();
 
                 //// Set object
