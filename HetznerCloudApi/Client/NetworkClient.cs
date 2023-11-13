@@ -103,11 +103,21 @@ namespace HetznerCloudApi.Client
             return JsonConvert.DeserializeObject<Network>($"{result["network"]}") ?? new Network();
         }
 
+        /// <summary>
+        /// Delete a Network
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task Delete(long id)
         {
             await Core.SendDeleteRequest(_token, $"/networks/{id}");
         }
 
+        /// <summary>
+        /// Delete a Network
+        /// </summary>
+        /// <param name="network"></param>
+        /// <returns></returns>
         public async Task Delete(Network network)
         {
             await Delete(network.Id);

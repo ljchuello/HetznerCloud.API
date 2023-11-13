@@ -20,14 +20,11 @@ namespace Test
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-// Get one
-Network network = await hetznerCloudClient.Network.Get(3550103);
+                long netoworkId = 3553797;
+                string ipRange = "192.168.32.0/20";
 
-// You can delete it by passing the object as a parameter
-await hetznerCloudClient.Network.Delete(network);
+                Action action = await hetznerCloudClient.NetworkAction.ChangeProtection(netoworkId, false);
 
-// // You can also delete it by passing the ID as a parameter.
-await hetznerCloudClient.Network.Delete(3550103);
 
             }
             catch (Exception ex)
