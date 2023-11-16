@@ -1,8 +1,5 @@
-﻿using System.Reflection.Metadata.Ecma335;
-using HetznerCloudApi;
-using HetznerCloudApi.Object.Firewall;
-using HetznerCloudApi.Object.Network;
-using Action = HetznerCloudApi.Object.Action.Action;
+﻿using HetznerCloudApi;
+using HetznerCloudApi.Object.Server;
 
 namespace Test
 {
@@ -20,12 +17,9 @@ namespace Test
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
 
-                long netoworkId = 3553797;
-                string ipRange = "192.168.32.0/20";
+                List<Server> list = await hetznerCloudClient.Server.Get();
 
-                Action action = await hetznerCloudClient.NetworkAction.ChangeProtection(netoworkId, false);
-
-
+                Server server = list[0];
             }
             catch (Exception ex)
             {

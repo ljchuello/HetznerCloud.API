@@ -1,4 +1,5 @@
 ﻿using HetznerCloudApi.Client;
+using HetznerCloudApi.Object.Server;
 
 namespace HetznerCloudApi
 {
@@ -18,6 +19,8 @@ namespace HetznerCloudApi
             Location = new LocationClient(token);
             Network = new NetworkClient(token);
             NetworkAction = new NetworkActionClient(token);
+            Network = new NetworkClient(token);
+            Server = new ServerClient(token);
             ServerType = new ServerTypeClient(token);
             SshKey = new SshKeyClient(token);
             Volume = new VolumeClient(token);
@@ -32,6 +35,7 @@ namespace HetznerCloudApi
         public LocationClient Location { get; private set; }
         public NetworkClient Network { get; private set; }
         public NetworkActionClient NetworkAction { get; private set; }
+        public ServerClient Server { get; private set; }
         public ServerTypeClient ServerType { get; private set; }
         public SshKeyClient SshKey { get; private set; }
         public VolumeClient Volume { get; private set; }
