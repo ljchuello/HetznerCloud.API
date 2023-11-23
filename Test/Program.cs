@@ -1,5 +1,6 @@
 ﻿using HetznerCloudApi;
 using HetznerCloudApi.Object.Server;
+using HetznerCloudApi.Object.Universal;
 
 namespace Test
 {
@@ -16,10 +17,6 @@ namespace Test
             {
                 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
                 hetznerCloudClient = new HetznerCloudClient(await File.ReadAllTextAsync("D:\\HetznerApiKey.txt"));
-
-                List<Server> list = await hetznerCloudClient.Server.Get();
-
-                Server server = list[0];
             }
             catch (Exception ex)
             {

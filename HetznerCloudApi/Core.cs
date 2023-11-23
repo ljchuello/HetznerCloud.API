@@ -205,6 +205,7 @@ namespace HetznerCloudApi
             switch (httpResponseMessage.StatusCode)
             {
                 case HttpStatusCode.NoContent:
+                case HttpStatusCode.OK:
                     break;
 
                 default:

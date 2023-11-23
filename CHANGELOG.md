@@ -1,5 +1,8 @@
 # Changelog
 
+## Version 0.1.2 (2023-11-22)
+- Server; Complete
+
 ## Version 0.1.1 (2023-11-13)
 - Networks Actions; Complete
 
