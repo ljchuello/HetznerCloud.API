@@ -1,11 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>netstandard2.0</TargetFramework>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-  </ItemGroup>
+		<PackageId>HetznerCloud.API</PackageId>
+		<Title>HetznerCloud.API</Title>
+		<Version>1.1.8</Version>
+		<Authors>ljchuello</Authors>
+		<Description>This C# / .NET Core SDK simplifies interaction with the powerful Hetzner Cloud API, enabling efficient management of resources such as servers, firewalls, networks, SSH keys, and volumes. Optimized for web developers and .NET applications, it streamlines cloud operations, providing the necessary control over your resources in Hetzner Cloud.</Description>
+		<PackageProjectUrl>https://www.nuget.org/packages/HetznerCloud.API</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/ljchuello/HetznerCloud.API</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<Copyright>MIT</Copyright>
+		<PackageTags>C#;Hetzner;Hetzner Cloud;Hetzner API; LJChuello</PackageTags>
+		<PackageIcon>icon-circle-cloud.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="icon-circle-cloud.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
