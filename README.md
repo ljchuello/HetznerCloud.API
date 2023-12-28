@@ -2,9 +2,6 @@
 
 ![Hetzner](https://github.com/ljchuello/HetznerCloud.API/assets/5316348/4e1b4486-5cfe-4470-9055-c8ac3f965249)
 
-
-## **Welcome to the Hetzner Cloud API documentation** 🚀
-
 This project is your complete guide to exploring and utilizing the Hetzner Cloud API. Here, you'll find everything you need to integrate your projects with one of the most powerful and efficient cloud platforms.
 
 **Key Features:**
@@ -24,7 +21,9 @@ This project is your complete guide to exploring and utilizing the Hetzner Cloud
 
 ***
 
-### To see all the features and functionality, visit [<mark style="color:green;">the Wiki</mark>](https://ljchuello.gitbook.io/hetznercloud.api/)
+## 📖 The Wiki
+
+To see all the features and functionality, visit [<mark style="color:green;">the Wiki</mark>](https://ljchuello.gitbook.io/hetznercloud.api/)
 
 ***
 
