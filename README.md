@@ -1,20 +1,25 @@
-# 🌐 Hetzner Cloud API
+# Welcome to HetznerCloud.Api
 
-## **Welcome to the Hetzner Cloud API documentation** 🚀
+## Implemented functionality
 
-This project is your complete guide to exploring and utilizing the Hetzner Cloud API. Here, you'll find everything you need to integrate your projects with one of the most powerful and efficient cloud platforms.
+:heavy_check_mark: - Available on API, implemented\
+:x: - Available on API, not implemented\
+:heavy_minus_sign:  - Not available on API
 
-**Key Features:**
+|  | Get all | Get one | Create | Update | Delete | Actions |
+|--|:--:|:--:|:--:|:--:|:--:|:--:|
+| Actions | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Datacenters | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Firewalls | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
+| Firewalls Actions | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: |
+| Images | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Locations | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| Networks | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
+| Networks Actions | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: |
+| Servers | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
+| Server Types | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: |
+| SSH Keys | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
+| Volumes | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
+| Volumes Actions | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: |
 
-* **Quick Start:** Begin with simple examples to connect and use the API. 🖥️
-* **Detailed API Reference:** Each endpoint is explained with code examples, making it easy even for beginners. 📚
-* **Use Cases:** Discover how other developers are leveraging the API in real-world scenarios. 💡
-* **Security and Best Practices:** Learn to use the API securely and efficiently. 🔐
-* **Support and Community:** Join our community and get help when you need it. 👥
-
-**Who is This GitBook For?**
-
-* **System and Web Developers:** If you program in C#, Angular, or any other language, you'll find useful resources here.
-* **IT and Network Professionals:** Tips for securing and optimizing your cloud projects.
-
-**Start Now!** Navigate the chapters, dive into the example codes, and take your cloud projects to the next level. We're here to help you every step of the way! 🌟
+To have the complete list of the functionalities implemented in this library [consult the Wiki](https://github.com/ljchuello/HetznerCloud.Api/wiki)
