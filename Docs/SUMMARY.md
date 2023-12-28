@@ -1,3 +1,3 @@
 # Table of contents
 
-* [Page](README.md)
+* [🌐 Hetzner Cloud API](README.md)
