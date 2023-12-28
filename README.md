@@ -22,4 +22,4 @@
 | Volumes | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_minus_sign: |
 | Volumes Actions | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_minus_sign: | :heavy_check_mark: |
 
-To have the complete list of the functionalities implemented in this library [consult the Wiki](https://github.com/ljchuello/HetznerCloud.Api/wiki)
+To have the complete list of the functionalities implemented in this library [consult the Wiki](https://ljchuello.gitbook.io/hetznercloud.api)
