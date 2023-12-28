@@ -27,7 +27,34 @@ This project is your complete guide to exploring and utilizing the Hetzner Cloud
 
 ***
 
-## Implemented functionality
+### To see all the features and functionality, visit [<mark style="color:green;">the Wiki</mark>](https://ljchuello.gitbook.io/hetznercloud.api/)
+
+***
+
+## 🔗 Compatibility
+
+This library is developed in **.NET Standard 2.0** and is compatible with all **.NET, .NET Core and .NET Framework**, it can also be used in Console projects, Web API, Class Library and even with Blazor WASM .
+
+| .NET implementation | Version support                               |
+| ------------------- | --------------------------------------------- |
+| .NET and .NET Core  | 2.0, 2.1, 2.2, 3.0, 3.1, 5.0, 6.0, 7.0, 8.0   |
+| .NET Framework      | 4.6.1 2, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+
+***
+
+## 🔧 Installation
+
+To install you must go to Nuget package manager and search for **HetznerCloud.API** and then install.
+
+[**NuGet Package**](https://www.nuget.org/packages/HetznerCloud.API/)
+
+```powershell
+PM> dotnet add package HetznerCloud.API
+```
+
+***
+
+## :heavy\_check\_mark: Implemented functionality
 
 :heavy\_check\_mark: - Available on API, implemented\
 :x: - Available on API, not implemented\
@@ -48,26 +75,3 @@ This project is your complete guide to exploring and utilizing the Hetzner Cloud
 | SSH Keys          | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_minus\_sign: |
 | Volumes           | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_check\_mark: | :heavy\_minus\_sign: |
 | Volumes Actions   | :heavy\_minus\_sign: | :heavy\_minus\_sign: | :heavy\_minus\_sign: | :heavy\_minus\_sign: | :heavy\_minus\_sign: | :heavy\_check\_mark: |
-
-***
-
-## 🔗 Compatibility
-
-This library is developed in .NET Standard 2.0 and is compatible with all .NET, .NET Core and .NET Framework, it can also be used in Console projects, Web API, Class Library and even with Blazor WASM .
-
-| .NET implementation | Version support                               |
-| ------------------- | --------------------------------------------- |
-| .NET and .NET Core  | 2.0, 2.1, 2.2, 3.0, 3.1, 5.0, 6.0, 7.0, 8.0   |
-| .NET Framework      | 4.6.1 2, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
-
-***
-
-## 🔧 Installation
-
-To install you must go to Nuget package manager and search for **HetznerCloud.API** and then install.
-
-[**NuGet Package**](https://www.nuget.org/packages/HetznerCloud.API/)
-
-```powershell
-PM> dotnet add package HetznerCloud.API
-```
