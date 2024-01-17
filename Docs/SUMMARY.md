@@ -5,6 +5,7 @@
 * [🌐 Hetzner Cloud API](README.md)
 * [🔗 Compatibility](overview/compatibility.md)
 * [🔧 Installation](overview/installation.md)
+* [🆘 Need help or have questions?](overview/need-help-or-have-questions.md)
 
 ## Functions & Methods
 
