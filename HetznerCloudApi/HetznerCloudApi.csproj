@@ -6,7 +6,7 @@
 
 		<PackageId>HetznerCloud.API</PackageId>
 		<Title>HetznerCloud.API</Title>
-		<Version>1.1.8</Version>
+		<Version>1.1.9</Version>
 		<Authors>ljchuello</Authors>
 		<Description>This C# / .NET Core SDK simplifies interaction with the powerful Hetzner Cloud API, enabling efficient management of resources such as servers, firewalls, networks, SSH keys, and volumes. Optimized for web developers and .NET applications, it streamlines cloud operations, providing the necessary control over your resources in Hetzner Cloud.</Description>
 		<PackageProjectUrl>https://www.nuget.org/packages/HetznerCloud.API</PackageProjectUrl>

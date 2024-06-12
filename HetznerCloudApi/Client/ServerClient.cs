@@ -52,7 +52,7 @@ namespace HetznerCloudApi.Client
 
             // Set
             JObject result = JObject.Parse(json);
-            Server server = JsonConvert.DeserializeObject<Server>($"{result["server"]}") ?? new Server();
+            Server server = JsonConvert.DeserializeObject<Server>($"{result["server"]}") ?? null;
 
             // Return
             return server;
@@ -88,33 +88,33 @@ namespace HetznerCloudApi.Client
         {
 
             // Location
-            long locationId = 0;
+            long datacenterId = 0;
             switch (dataCenter)
             {
                 case eDataCenter.fsn1:
-                    locationId = 1;
+                    datacenterId = 4;
                     break;
 
                 case eDataCenter.nbg1:
-                    locationId = 2;
+                    datacenterId = 2;
                     break;
 
                 case eDataCenter.hel1:
-                    locationId = 3;
+                    datacenterId = 3;
                     break;
 
                 case eDataCenter.ash:
-                    locationId = 4;
+                    datacenterId = 5;
                     break;
 
                 case eDataCenter.hil:
-                    locationId = 5;
+                    datacenterId = 6;
                     break;
             }
 
             Post post = new Post
             {
-                Location = locationId,
+                Datacenter = datacenterId,
                 Image = imageId,
                 Name = name,
                 ServerType = serverType,
@@ -162,7 +162,7 @@ namespace HetznerCloudApi.Client
         /// <summary>
         /// Creates a new Server. Returns preliminary information about the Server as well as an Action that covers progress of creation.
         /// </summary>
-        /// <param name="locationId">ID or name of Location to create Server in (must not be used together with datacenter)</param>
+        /// <param name="datacenterId">ID of the Datacenter</param>
         /// <param name="imageId">ID or name of the Image the Server is created from</param>
         /// <param name="name">Name of the Server to create (must be unique per Project and a valid hostname as per RFC 1123)</param>
         /// <param name="serverType">ID or name of the Server type this Server should be created with</param>
@@ -175,7 +175,7 @@ namespace HetznerCloudApi.Client
         /// <param name="userData">Cloud-Init user data to use during Server creation. This field is limited to 32KiB.</param>
         /// <returns></returns>
         public async Task<Server> Create(
-            long locationId,
+            long datacenterId,
             long imageId,
             string name,
             long serverType,
@@ -190,7 +190,7 @@ namespace HetznerCloudApi.Client
 
             Post post = new Post
             {
-                Location = locationId,
+                Datacenter = datacenterId,
                 Image = imageId,
                 Name = name,
                 ServerType = serverType,
@@ -284,8 +284,8 @@ namespace HetznerCloudApi.Client
             [JsonProperty("ssh_keys", NullValueHandling = NullValueHandling.Ignore)]
             public List<long> SshKeys { get; set; }
 
-            [JsonProperty("location", NullValueHandling = NullValueHandling.Ignore)]
-            public long Location { get; set; }
+            [JsonProperty("datacenter", NullValueHandling = NullValueHandling.Ignore)]
+            public long Datacenter { get; set; }
 
             [JsonProperty("image", NullValueHandling = NullValueHandling.Ignore)]
             public long Image { get; set; }
