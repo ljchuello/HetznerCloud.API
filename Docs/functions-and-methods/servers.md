@@ -39,11 +39,11 @@ In this example, we'll specify the minimum to create a server.
 ```csharp
 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("apiKey");
 
-long locationId = 4; // ID or name of Location to create Server in (must not be used together with datacenter)
+long datacenterId = 4; // ID of Datacenter to create Server
 long imageId = 45557056; // ID or name of the Image the Server is created from
 string name = "name-example"; // Name of the Server to create (must be unique per Project and a valid hostname as per RFC 1123)
 long serverTypeId = 22; // ID or name of the Image the Server is created from
-Server server = await hetznerCloudClient.Server.Create(locationId, imageId, name, serverTypeId);
+Server server = await hetznerCloudClient.Server.Create(datacenterId, imageId, name, serverTypeId);
 ```
 
 Additionally, the [eDataCenter](https://github.com/ljchuello/HetznerCloud.Api/wiki/Datacenter#edatacenter) enum has been created, aiming to standardize resource creation throughout the Hetzner environment. It can be used for server creation as follows
@@ -65,7 +65,7 @@ In addition to creating a server (simple), we can specify every detail of the se
 ```csharp
 HetznerCloudClient hetznerCloudClient = new HetznerCloudClient("ApiKey");
 
-long locationId = 3; // ID or name of Location to create Server in (must not be used together with datacenter)
+long datacenterId = 4; // ID of Datacenter to create Server
 long imageId = 45557056; // ID or name of the Image the Server is created from
 string name = "name-example"; // Name of the Server to create (must be unique per Project and a valid hostname as per RFC 1123)
 long serverTypeId = 22; // ID or name of the Image the Server is created from
@@ -75,7 +75,7 @@ List<long> sshKeysIds = new List<long> { 13121954, 16371855 }; // List<long> con
 List<long> volumesIds = new List<long> { 100090124 }; // List<long> containing the IDs of the volumes that will be attached to the server and mounted automatically
 long placementGroupId = 270736; // ID or Placement Group
 Server server = await hetznerCloudClient.Server.Create(
-    locationId,
+    datacenterId,
     imageId,
     name,
     serverTypeId,
