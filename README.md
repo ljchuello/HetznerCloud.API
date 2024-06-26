@@ -23,7 +23,7 @@ This project is your complete guide to exploring and utilizing the Hetzner Cloud
 
 ## 📖 The Wiki
 
-To see all the features and functionality, visit [<mark style="color:green;">the Wiki</mark>](https://ljchuello.gitbook.io/hetznercloud.api/)
+To see all the features and functionality, visit [<mark style="color:green;">the Wiki</mark>](https://hetzner.ljchuello.com/)
 
 ***
 
